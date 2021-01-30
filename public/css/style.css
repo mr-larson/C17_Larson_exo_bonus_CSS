@@ -1,13 +1,15 @@
-html{
-    margin: 0!important;
-    padding: 0!important;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(13, 23, 36);
+    background-color: rgb(15, 22, 31);
 }
+/* card start */
 .container{
     position: relative;
     width: 1000px;
@@ -15,14 +17,13 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
 }
 .container .card{
     position: relative;
     max-width: 300px;
     height: 290px;
     background: #fff;
-    margin: 30px 10px;
+    margin: 100px 10px;
     padding: 20px 20px;
     display: flex;
     flex-direction: column;
@@ -31,6 +32,7 @@ body{
 }
 .container .card:hover{
     height: 490px;
+    transition-delay: 0.1s;
 }
 .container .card .imgBx{
     position: relative;
@@ -41,7 +43,6 @@ body{
     box-shadow: 0 5px 20px rgba(245, 245, 245, 0.2);
 }
 .container .card.imgBx img{
-    max-width: 80%;
     border-radius: 6px;
 }
 .container .card .content{
@@ -59,4 +60,12 @@ body{
     opacity: 1;
     margin-top: -40px;
     transition-delay: 0.3s;
+}
+/* animation start */
+.animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: cyan;
 }
