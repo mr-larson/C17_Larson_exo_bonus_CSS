@@ -1,3 +1,4 @@
+/* ------------------------ body --------------------- */
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 body{
     background-color: rgb(11, 24, 32);
 }
-/* validé start */
+/*-------------------------- validé start ---------------------*/
 .container1{
     position: relative;
     display: flex;
@@ -14,7 +15,7 @@ body{
     align-items: center;
     flex-direction: column;
     padding: 20px 0px 30px 0px;
-    border-bottom:solid  rgba(18, 200, 255, 0.5);
+    border-bottom:solid  rgb(72, 227, 255);
     box-shadow: 0 5px 30px rgba(13, 219, 255, 0.5);
     
 }
@@ -64,10 +65,10 @@ body{
     text-shadow: 0 0 5px #00fff1;
     text-shadow: 0 0 20px #00fff1;
 }
-/* card start */
+/*------------------------- card start ----------------------*/
 .container{
     position: relative;
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,17 +118,17 @@ body{
     margin-top: -40px;
     transition-delay: 0.3s;
 }
-/* animation start */
+/*----------------------- animation start ---------------------*/
 .animation{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    animation: animate 10% linear infinite;
+    animation: animate linear infinite 1.5s;
 }
 @keyframes animate{
     0%{
-        filter: hue-rotate(0deg);
+        filter: hue-rotate(1deg);
     }
     100%{
         filter: hue-rotate(360deg);
@@ -161,14 +162,69 @@ body{
                 0 0 60px cyan,
                 0 0 80px cyan,
                 0 0 100px cyan;
-    animation: animate 2% linear infinite;
-    animation-delay: calc(0.1s * var(--i));            
+    animation: animate1  linear infinite;
+    animation-delay: calc(0.5s * var(--i));            
 }
-@keyframes animate{
+@keyframes animate1{
     0%{
-        transform: scale(1);
+        transform: scale(7);
     }
     80%,100%{
-        transform: scale(0);
+        transform: scale(2);
     }
 }
+/*------------------------------- ring --------------------------*/
+.ring .container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ring .container .loading{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgb(12, 26, 36);
+}
+.ring .container .loading:before{
+   content: ''; 
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 50%;
+   height: 100%;
+   background: linear-gradient(to top, transparent,rgb(25, 91, 102,0.4));
+   background-size: 100px 180px;
+   background-repeat: no-repeat;
+   border-top-left-radius: 100px;
+   border-bottom-left-radius: 100px;
+} 
+.ring .container .loading:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: cyan;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px cyan,
+                0 0 20px cyan,
+                0 0 40px cyan,
+                0 0 60px cyan,
+                0 0 80px cyan,
+                0 0 100px cyan;
+} 
+.ring .container .loading span{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: rgb(11, 24, 32);
+    border-radius: 50%;
+}  
